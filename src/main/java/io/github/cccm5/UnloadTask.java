@@ -40,7 +40,7 @@ public class UnloadTask extends CargoTask {
             this.cancel();
             CargoMain.getQue().remove(originalPilot);
             originalPilot.sendMessage(CargoMain.SUCCESS_TAG + "All cargo unloaded");
-            Bukkit.broadcastMessage(ChatColor.DARK_RED + craft.getPilot().getName() + " has unloaded cargo worth $" + String.format("%.2f", count * item.getTradePrice()) + " from a " + craft.getType().getStringProperty(CraftType.NAME) + " at X: " + craft.getPilot().getLocation().getBlockX() + ", Y: " + craft.getPilot().getLocation().getBlockY() + ", Z: " + craft.getPilot().getLocation().getBlockZ() + ".");
+            Bukkit.broadcastMessage(ChatColor.GOLD + craft.getPilot().getName() + " has unloaded cargo worth $" + String.format("%.2f", count * item.getTradePrice()) + " from a " + craft.getType().getStringProperty(CraftType.NAME) + " at X: " + craft.getPilot().getLocation().getBlockX() + ", Y: " + craft.getPilot().getLocation().getBlockY() + ", Z: " + craft.getPilot().getLocation().getBlockZ() + ".");
             craft.getPilot().playSound(craft.getPilot().getLocation(), Sound.ENTITY_PLAYER_LEVELUP,1, 1);
             return;
         }
