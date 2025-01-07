@@ -87,7 +87,7 @@ public class LoadTask extends CargoTask {
             this.cancel();
             CargoMain.getQue().remove(originalPilot);
             originalPilot.sendMessage(CargoMain.SUCCESS_TAG + "All cargo loaded");
-            Bukkit.broadcastMessage(ChatColor.DARK_RED + craft.getPilot().getName() + " has loaded cargo worth $" + String.format("%.2f",loaded * item.getTradePrice()) + " onto a " + craft.getType().getStringProperty(CraftType.NAME) + " at X: " + craft.getPilot().getLocation().getBlockX() + ", Y: " + craft.getPilot().getLocation().getBlockY() + ", Z: " + craft.getPilot().getLocation().getBlockZ() + ". Intercept them to steal it.");
+            Bukkit.broadcastMessage(ChatColor.GOLD + craft.getPilot().getName() + " has loaded cargo worth $" + String.format("%.2f",loaded * item.getTradePrice()) + " onto a " + craft.getType().getStringProperty(CraftType.NAME) + " at X: " + craft.getPilot().getLocation().getBlockX() + ", Y: " + craft.getPilot().getLocation().getBlockY() + ", Z: " + craft.getPilot().getLocation().getBlockZ() + ". Intercept them to steal it.");
             for (Player p : Bukkit.getOnlinePlayers()) {
                 p.playSound(p.getLocation(), Sound.ENTITY_WITHER_AMBIENT,1, 1);
             }
